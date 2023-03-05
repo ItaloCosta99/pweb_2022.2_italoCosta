@@ -13,47 +13,31 @@
   </head>
   <body>
     <div class="w3-bar w3-black w3-xlarge">
-      <a
-        href="/"
-        class="w3-bar-item w3-button w3-mobile"
-      >
-        Início
-      </a>
-      <a
-        href="/adicionarPessoa"
-        class="w3-bar-item w3-button w3-mobile"
-      >
+      <a href="/" class="w3-bar-item w3-button w3-mobile"> Início </a>
+      <a href="/adicionarPessoa" class="w3-bar-item w3-button w3-mobile">
         Adicionar pessoa
       </a>
-      <a
-        href="/listarPessoas"
-        class="w3-bar-item w3-button w3-mobile"
-      >
+      <a href="/listarPessoas" class="w3-bar-item w3-button w3-mobile">
         Listar pessoas
       </a>
-      <a
-        href="/contato"
-        class="w3-bar-item w3-button w3-mobile w3-right"
-      >
+      <a href="/public/contato.html" class="w3-bar-item w3-button w3-mobile w3-right">
         Contato
       </a>
-      <a
-        href="/sobre"
-        class="w3-bar-item w3-button w3-mobile w3-right"
-      >
+      <a href="/public/sobre.html" class="w3-bar-item w3-button w3-mobile w3-right">
         Sobre o site
       </a>
-      <a
-        href="/noticias"
-        class="w3-bar-item w3-button w3-mobile w3-right"
-      >
+      <a href="/public/noticias.html" class="w3-bar-item w3-button w3-mobile w3-right">
         Notícias
       </a>
     </div>
     <main class="container-fluid">
-      <h1>Formulário para editar pessoas:</h1>
+      <h1>Formulário para adicionar pessoas:</h1>
       <section>
-        <form action="">
+        <form
+          th:action="@{/editar/{id}(id=${pessoa.id})}"
+          th:object="${pessoa}"
+          method="post"
+        >
           <div class="grid">
             <span>
               <label for="nome">Seu Nomezinho*:</label>
@@ -62,11 +46,20 @@
                 id="nome"
                 name="nome"
                 placeholder="Nome Completo"
+                th:field="*{nome}"
+                required
               />
             </span>
             <span>
               <label for="email">Email*:</label>
-              <input type="email" id="email" name="email" placeholder="Email" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                th:field="*{email}"
+                required
+              />
               <small>Nunca divulgaremos :)</small>
             </span>
             <span>
@@ -76,6 +69,8 @@
                 id="dataNascimento"
                 name="dataNascimento"
                 placeholder="dataNascimento"
+                th:field="*{dataNascimento}"
+                required
               />
             </span>
           </div>
@@ -87,36 +82,47 @@
                   type="radio"
                   id="radio-1"
                   name="radio"
-                  value="radio-1"
+                  value="Masculino"
                   checked
+                  th:field="*{genero}"
+                  required
                 />
                 Masculino
               </label>
               <label for="radio-2">
-                <input type="radio" id="radio-2" name="radio" value="radio-2" />
+                <input
+                  type="radio"
+                  id="radio-2"
+                  name="radio"
+                  value="Feminino"
+                  th:field="*{genero}"
+                  required
+                />
                 Feminino
               </label>
               <label for="radio-3">
-                <input type="radio" id="radio-3" name="radio" value="radio-3" />
+                <input
+                  type="radio"
+                  id="radio-3"
+                  name="radio"
+                  value="Não Informado"
+                  th:field="*{genero}"
+                  required
+                />
                 Não informar
               </label>
             </fieldset>
           </div>
           <div class="grid">
-            <input
-              type="submit"
-              value="Adicionar!"
-              onclick="event.preventDefault()"
-            />
-            <input
-              type="reset"
-              value="Limpar"
-              onclick="event.preventDefault()"
-            />
+            <button type="submit">Atualizar</button>
+            <button type="reset">Limpar</button>
           </div>
           <p>* Campo obrigatório</p>
         </form>
       </section>
     </main>
+    <script>
+
+    </script>
   </body>
 </html>
