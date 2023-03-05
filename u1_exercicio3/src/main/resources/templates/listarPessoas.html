@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="w3-bar w3-black w3-xlarge">
-      <a href="/index" class="w3-bar-item w3-button w3-mobile"> Início </a>
+      <a href="/" class="w3-bar-item w3-button w3-mobile">Início</a>
       <a href="/adicionarPessoa" class="w3-bar-item w3-button w3-mobile">
         Adicionar pessoa
       </a>
@@ -54,7 +54,9 @@
             <td>
               <a th:href="'mailto:' + ${p.email}" th:text="${p.email}"></a>
             </td>
-            <td th:text="${#temporals.format(p.dataNascimento, 'dd/MM/yyyy')}"></td>
+            <td
+              th:text="${#temporals.format(p.dataNascimento, 'dd/MM/yyyy')}"
+            ></td>
             <td th:text="${p.genero}"></td>
             <td><a th:href="@{/editar/{id}(id=${p.id})}">Editar</a></td>
             <td><a th:href="@{/remover/{id}(id=${p.id})}">Remover</a></td>
