@@ -1,10 +1,10 @@
-package br.com.italoCosta.biritaShop;
+package br.com.italocosta.biritashop;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BiritaShopApplicationTests {
+class BiritashopApplicationTests {
 
 	@Test
 	void contextLoads() {

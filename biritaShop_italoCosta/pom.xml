@@ -8,11 +8,11 @@
 		<version>2.7.10</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.italoCosta.biritaShop</groupId>
-	<artifactId>biritaShop</artifactId>
+	<groupId>br.com.italocosta.biritashop</groupId>
+	<artifactId>biritashop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>biritaShop</name>
-	<description>Birita Shop - PWeb 2022.2 by Italo Costa</description>
+	<name>biritashop</name>
+	<description>Birita Shop - PWeb 2022.2 by Ítalo Costa</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>

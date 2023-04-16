@@ -1,13 +1,13 @@
-package br.com.italoCosta.biritaShop;
+package br.com.italocosta.biritashop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BiritaShopApplication {
+public class BiritashopApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BiritaShopApplication.class, args);
+		SpringApplication.run(BiritashopApplication.class, args);
 	}
 
 }
